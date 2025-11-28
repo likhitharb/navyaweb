@@ -11,43 +11,44 @@
 <h2>Registration Form</h2>
 
 <div class="form-container">
-    <form action="submit.php" method="POST" onsubmit="return validateForm()">
-
+    <form action="submit.php" method="POST">
         <table>
-            <tr><th colspan="2">Personal Information</th></tr>
+            <tr>
+                <th colspan="2">Personal Information</th>
+            </tr>
 
             <tr>
-                <td><label>First Name:</label></td>
+                <td>First Name:</td>
                 <td><input type="text" name="fname" required></td>
             </tr>
 
             <tr>
-                <td><label>Last Name:</label></td>
+                <td>Last Name:</td>
                 <td><input type="text" name="lname" required></td>
             </tr>
 
             <tr>
-                <td><label>Email:</label></td>
+                <td>Email:</td>
                 <td><input type="email" name="email" required></td>
             </tr>
 
             <tr>
-                <td><label>Password:</label></td>
+                <td>Password:</td>
                 <td><input type="password" name="password" required></td>
             </tr>
 
             <tr>
-                <td><label>Date of Birth:</label></td>
+                <td>Date of Birth:</td>
                 <td><input type="date" name="dob" required></td>
             </tr>
 
             <tr>
-                <td><label>Phone Number:</label></td>
-                <td><input type="tel" name="phone" pattern="[0-9]{10}" required></td>
+                <td>Phone Number:</td>
+                <td><input type="tel" name="phone" required></td>
             </tr>
 
             <tr>
-                <td><label>Gender:</label></td>
+                <td>Gender:</td>
                 <td>
                     <input type="radio" name="gender" value="Male"> Male
                     <input type="radio" name="gender" value="Female"> Female
@@ -55,18 +56,18 @@
             </tr>
 
             <tr>
-                <td><label>Course:</label></td>
+                <td>Select Course:</td>
                 <td>
                     <select name="course">
                         <option value="Computer Science">Computer Science</option>
                         <option value="Information Technology">Information Technology</option>
-                        <option value="Electronics">Electronics</option>
+                        <option value="ECE">Electronics & Communication</option>
                     </select>
                 </td>
             </tr>
 
             <tr>
-                <td><label>Hobbies:</label></td>
+                <td>Hobbies:</td>
                 <td>
                     <input type="checkbox" name="hobbies[]" value="Sports"> Sports
                     <input type="checkbox" name="hobbies[]" value="Music"> Music
@@ -75,25 +76,19 @@
             </tr>
 
             <tr>
-                <td><label>Address:</label></td>
+                <td>Address:</td>
                 <td><textarea name="address" rows="4" required></textarea></td>
             </tr>
 
             <tr>
-                <td colspan="2" class="note">* All fields are mandatory</td>
-            </tr>
-
-            <tr>
-                <td colspan="2" style="text-align:center;">
+                <td colspan="2" style="text-align:center">
                     <input type="submit" value="Submit">
                 </td>
             </tr>
 
         </table>
-
     </form>
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>
