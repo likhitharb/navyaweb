@@ -8,87 +8,99 @@
 </head>
 <body>
 
-<h2>Registration Form</h2>
+    <h2>Registration Form</h2>
 
-<div class="form-container">
-    <form action="submit.php" method="POST">
-        <table>
-            <tr>
-                <th colspan="2">Personal Information</th>
-            </tr>
+    <div class="form-container">
+        <form action="submit.php" method="post">
+            <table>
+                <tr>
+                    <th colspan="2">Personal Information</th>
+                </tr>
 
-            <tr>
-                <td>First Name:</td>
-                <td><input type="text" name="fname" required></td>
-            </tr>
+                <tr>
+                    <td><label for="fname">First Name:</label></td>
+                    <td><input type="text" id="fname" name="fname" required></td>
+                </tr>
 
-            <tr>
-                <td>Last Name:</td>
-                <td><input type="text" name="lname" required></td>
-            </tr>
+                <tr>
+                    <td><label for="lname">Last Name:</label></td>
+                    <td><input type="text" id="lname" name="lname" required></td>
+                </tr>
 
-            <tr>
-                <td>Email:</td>
-                <td><input type="email" name="email" required></td>
-            </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
 
-            <tr>
-                <td>Password:</td>
-                <td><input type="password" name="password" required></td>
-            </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
 
-            <tr>
-                <td>Date of Birth:</td>
-                <td><input type="date" name="dob" required></td>
-            </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td><input type="date" id="dob" name="dob" required></td>
+                </tr>
 
-            <tr>
-                <td>Phone Number:</td>
-                <td><input type="tel" name="phone" required></td>
-            </tr>
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required></td>
+                </tr>
 
-            <tr>
-                <td>Gender:</td>
-                <td>
-                    <input type="radio" name="gender" value="Male"> Male
-                    <input type="radio" name="gender" value="Female"> Female
-                </td>
-            </tr>
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Male</label>
 
-            <tr>
-                <td>Select Course:</td>
-                <td>
-                    <select name="course">
-                        <option value="Computer Science">Computer Science</option>
-                        <option value="Information Technology">Information Technology</option>
-                        <option value="ECE">Electronics & Communication</option>
-                    </select>
-                </td>
-            </tr>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
 
-            <tr>
-                <td>Hobbies:</td>
-                <td>
-                    <input type="checkbox" name="hobbies[]" value="Sports"> Sports
-                    <input type="checkbox" name="hobbies[]" value="Music"> Music
-                    <input type="checkbox" name="hobbies[]" value="Reading"> Reading
-                </td>
-            </tr>
+                <tr>
+                    <td><label for="course">Select Course:</label></td>
+                    <td>
+                        <select id="course" name="course">
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Electronics & Communication">Electronics & Communication</option>
+                        </select>
+                    </td>
+                </tr>
 
-            <tr>
-                <td>Address:</td>
-                <td><textarea name="address" rows="4" required></textarea></td>
-            </tr>
+                <tr>
+                    <td><label>Hobbies:</label></td>
+                    <td>
+                        <input type="checkbox" id="sports" name="hobbies[]" value="Sports">
+                        <label for="sports">Sports</label>
 
-            <tr>
-                <td colspan="2" style="text-align:center">
-                    <input type="submit" value="Submit">
-                </td>
-            </tr>
+                        <input type="checkbox" id="music" name="hobbies[]" value="Music">
+                        <label for="music">Music</label>
 
-        </table>
-    </form>
-</div>
+                        <input type="checkbox" id="reading" name="hobbies[]" value="Reading">
+                        <label for="reading">Reading</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><textarea id="address" name="address" rows="4" required></textarea></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><p class="note">* All fields are mandatory</p></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
 
 </body>
 </html>
